@@ -10,6 +10,7 @@ djangorestframework = "*"
 coreapi = "*"
 PyYAML = "*"
 drf-yasg = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
