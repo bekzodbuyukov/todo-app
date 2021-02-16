@@ -16,7 +16,6 @@ from . import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.append('.')
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,7 +34,8 @@ ALLOWED_HOSTS = ['*']
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
 
@@ -50,9 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd party
     'rest_framework',
+    'drf_yasg',
     # Locals
     'todos',
-    # 'todos.apps.TodosConfig',
     'api.v1'
 ]
 

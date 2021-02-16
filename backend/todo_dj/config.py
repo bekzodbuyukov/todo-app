@@ -12,3 +12,6 @@ env.read_env()
 # reading variables from .env
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
+API_TITLE = env('API_TITLE')
+API_DEFAULT_VERSION = env('API_DEFAULT_VERSION')
+API_DESCRIPTION = env('API_DESCRIPTION')
