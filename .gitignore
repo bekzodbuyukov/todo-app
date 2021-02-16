@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 #Locals
-.idea
+.idea/
