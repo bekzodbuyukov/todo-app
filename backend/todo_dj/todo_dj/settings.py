@@ -9,13 +9,14 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import sys
 from pathlib import Path
 from . import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.append('.')
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,6 +31,14 @@ DEBUG = config.DEBUG
 ALLOWED_HOSTS = ['*']
 
 
+# DRF specific settings
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,8 +48,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 3rd party
+    'rest_framework',
     # Locals
-    'todos.apps.TodosConfig',
+    'todos',
+    # 'todos.apps.TodosConfig',
     'api.v1'
 ]
 

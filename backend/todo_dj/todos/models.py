@@ -16,7 +16,7 @@ class Todo(models.Model):
                             help_text='Todo deadline date and time')
     
     class Meta:
-        ''' Meta Class for Todo model '''
+        ''' Meta Class for Todo Model '''
         verbose_name = 'Todo'
         verbose_name_plural = 'Todos'
     
