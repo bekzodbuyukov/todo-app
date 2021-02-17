@@ -1,2 +1,2 @@
 # todo-app
-Todo app using Django &amp; DRF
+Todo app using Django &amp; DRF &amp; React
